@@ -1,0 +1,14 @@
+{
+  "name": "accitc",
+  "version": "1.0.0",
+  "description": "ACCITC Webpage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch --style=compressed -w scss/index.scss -o css"
+  },
+  "author": "Khan Asfi Reza",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
