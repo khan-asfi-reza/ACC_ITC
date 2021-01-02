@@ -14,4 +14,18 @@ body {
   font-weight: 400;
   min-width: 100%;
   overflow-x: hidden;
+  font-family: "Kumbh Sans", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white !important;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+button{
+  cursor: pointer;
+}
+
