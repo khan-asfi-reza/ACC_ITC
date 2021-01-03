@@ -17,7 +17,8 @@ body {
   color: black !important; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+ monospace; }
 
 button {
   cursor: pointer; }
@@ -34,3 +35,29 @@ img {
       display: flex;
       flex-direction: column;
       justify-content: center; } }
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar-nav {
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-link{
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover{
+  color: darkblue;
+}
+
