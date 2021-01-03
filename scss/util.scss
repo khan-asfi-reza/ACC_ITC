@@ -1,32 +1,77 @@
-.display-flex{
+
+@mixin laptop{
+  @media screen and (max-width: 1200px){
+    @content
+  }
+}
+
+@mixin tablet{
+  @media screen and (max-width: 992px){
+    @content
+  }
+}
+
+@mixin small-tab{
+  @media screen and (max-width: 768px){
+    @content
+  }
+}
+
+@mixin large-phone{
+  @media screen and (max-width: 425px){
+    @content
+  }
+}
+
+@mixin mid-phone{
+  @media screen and (max-width: 375px){
+    @content
+  }
+}
+
+@mixin sml-phone{
+  @media screen and (max-width: 320px){
+    @content
+  }
+}
+
+@mixin display-flex{
   display: flex;
 }
 
-.row-flex{
+
+
+@mixin row-flex{
+  display: flex;
   flex-direction: row;
 }
 
-.column-flex{
+@mixin column-flex{
+  display: flex;
   flex-direction: column;
 }
 
-.justify-center{
+@mixin justify-center{
   justify-content: center;
 }
 
-.align-center{
+@mixin justify-space-between{
+  justify-content: space-between;
+}
+
+@mixin align-center{
   align-items: center;
 }
 
-.flex-1{
+@mixin flex-1{
   flex: 1;
 }
 
-.flex-2{
+@mixin flex-2{
   flex: 2;
 }
 
-.flex-3{
+@mixin flex-3{
   flex: 3;
 }
 

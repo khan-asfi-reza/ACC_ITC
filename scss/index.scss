@@ -30,3 +30,18 @@ button{
   cursor: pointer;
 }
 
+// Testing Purpose Only
+img{
+  width: 400px;
+  height: auto;
+}
+
+.row{
+  @include row-flex;
+  @include small-tab{
+    @include column-flex;
+    @include justify-center
+  }
+}
+
+
