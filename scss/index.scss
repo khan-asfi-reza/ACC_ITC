@@ -5,6 +5,7 @@ html {
   overflow-x: hidden;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -17,7 +18,7 @@ body {
   font-family: "Kumbh Sans", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white !important;
+  color: black !important;
 }
 
 code {
@@ -28,4 +29,19 @@ code {
 button{
   cursor: pointer;
 }
+
+// Testing Purpose Only
+img{
+  width: 400px;
+  height: auto;
+}
+
+.row{
+  @include row-flex;
+  @include small-tab{
+    @include column-flex;
+    @include justify-center
+  }
+}
+
 
