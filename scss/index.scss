@@ -682,9 +682,13 @@ nav {
     }
   }
   .our-team{
+    .row{
+      padding: 0 5%;
+    }
     .number-row{
       grid-template-columns: 50% 50%;
       grid-row-gap: 10px;
+
       p{
         font-size: 1.6rem;
       }

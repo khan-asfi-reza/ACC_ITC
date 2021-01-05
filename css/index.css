@@ -514,6 +514,8 @@ nav {
       grid-template-columns: 50% 50%;
       grid-column-gap: 20px;
       grid-row-gap: 20px; }
+  .our-team .row {
+    padding: 0 5%; }
   .our-team .number-row {
     grid-template-columns: 50% 50%;
     grid-row-gap: 10px; }
