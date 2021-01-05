@@ -9,6 +9,7 @@
   "author": "Khan Asfi Reza",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "node-sass": "^5.0.0"
   }
 }
