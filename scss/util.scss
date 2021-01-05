@@ -1,45 +1,7 @@
 
-@mixin laptop{
-  @media screen and (max-width: 1200px){
-    @content
-  }
-}
-
-@mixin tablet{
-  @media screen and (max-width: 992px){
-    @content
-  }
-}
-
-@mixin small-tab{
-  @media screen and (max-width: 768px){
-    @content
-  }
-}
-
-@mixin large-phone{
-  @media screen and (max-width: 425px){
-    @content
-  }
-}
-
-@mixin mid-phone{
-  @media screen and (max-width: 375px){
-    @content
-  }
-}
-
-@mixin sml-phone{
-  @media screen and (max-width: 320px){
-    @content
-  }
-}
-
 @mixin display-flex{
   display: flex;
 }
-
-
 
 @mixin row-flex{
   display: flex;
@@ -75,3 +37,44 @@
   flex: 3;
 }
 
+@mixin large-screen{
+  @media screen and (max-width: 1920px){
+    @content
+  }
+}
+
+@mixin laptop{
+  @media screen and (max-width: 1200px){
+    @content
+  }
+}
+
+@mixin tablet{
+  @media screen and (max-width: 992px){
+    @content
+  }
+}
+
+@mixin small-tab{
+  @media screen and (max-width: 768px){
+    @content
+  }
+}
+
+@mixin large-phone{
+  @media screen and (max-width: 425px){
+    @content
+  }
+}
+
+@mixin mid-phone{
+  @media screen and (max-width: 375px){
+    @content
+  }
+}
+
+@mixin sml-phone{
+  @media screen and (max-width: 320px){
+    @content
+  }
+}
