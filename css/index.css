@@ -56,7 +56,8 @@ body {
   color: black !important; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+ monospace; }
 
 button {
   cursor: pointer; }
@@ -157,11 +158,11 @@ img {
     margin: 20px 0;
     outline: none;
     background-color: #0c1241;
-    color: white;
+    color: #50c240;
     font-size: 1.4rem;
     border-radius: 50px;
     position: relative;
-    border: 2px solid grey;
+    border: 2px solid #141c5a;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .header .header-text button:hover {
     background-color: #1a1e41; }
@@ -292,9 +293,9 @@ img {
     margin-top: 0;
     margin-bottom: 5%; }
     .sectors .section-header h2 {
-      color: white; }
+      color: #50c240; }
     .sectors .section-header p {
-      color: grey; }
+      color: #e1e1e1; }
   .sectors .card {
     display: flex;
     flex-direction: column;
@@ -305,14 +306,14 @@ img {
     min-height: 15rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .sectors .card h4 {
-      color: #babfb7;
+      color: #50c240;
       margin: 10px 0; }
     .sectors .card p {
-      color: grey; }
+      color:#e1e1e1; }
     .sectors .card-logo-container {
       height: 3.5rem;
       width: 3.5rem;
-      background-color: white;
+      background-color: #50c240;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -328,14 +329,14 @@ img {
 .our-team {
   background-color: #50c240; }
   .our-team p {
-    color: #dbdbdb; }
+    color:#000000; }
   .our-team .section-header {
     margin: 0;
     padding: 5% 8%; }
     .our-team .section-header h2 {
-      color: white; }
+      color: #1a1e41; }
     .our-team .section-header p {
-      color: #f7f7f7; }
+      color:#000000; }
   .our-team .row {
     margin-bottom: 5%;
     padding: 0 10%; }
@@ -347,7 +348,7 @@ img {
       border-right: 1px solid white;
       border-left: 1px solid white;
       padding: 10% 0;
-      color: white;
+      color: #1a1e41;
       font-size: 2rem; }
       .our-team .number-row p:first-child {
         border-left: 2px solid white; }
