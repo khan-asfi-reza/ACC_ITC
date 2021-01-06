@@ -48,7 +48,7 @@ html {
 }
 
 .light {
-  --bg: $text-header-color;
+  --bg: white;
 }
 
 body {
@@ -605,7 +605,7 @@ nav {
         color: #232241;
       }
 
-      &-logo-container {
+      & .logo-container {
         border: 2px solid $theme-primary-color;;
       }
 
@@ -817,6 +817,7 @@ nav {
 
   .img-box {
     position: relative;
+    min-height: 70vh;
 
     img {
       position: absolute;
