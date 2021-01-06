@@ -11,13 +11,16 @@
 </head>
 
 
-<body>
+<body class="light">
 <nav class="navbar">
     <div class="logo-container">
         <div class="logo-box">
             <img src="img/logo.png" alt="">
         </div>
+        <h4>ACC ITC</h4>
+
     </div>
+
     <div class="menu-container">
         <div class="hamburger">
             <div class="line"></div>
@@ -124,39 +127,38 @@
     </div>
 </section>
 
-<section class="our-team">
+<section id="our_team" class="our-team">
     <div class="section-header">
         <h2>Our Team</h2>
         <p>Learn more about Adamjee Cantonment College and IT Club</p>
     </div>
     <div class="row">
         <div class="section-box flex-1 text-center">
-            <p>Adamjee Cantonment College is a renowned and well established educational institution of our country and
-                managed by Bangladesh Army. It is crowned with the glory of passing over half a century in the field of
-                education. The institution has earned the rare prestige of being one of the top ranking colleges of our
-                country for its outstanding academic achievements in the recent years. In 2014, the college was
-                recognized
-                as the best college among 29 colleges run by Bangladesh Army based on academic and extra-curriculur
-                performances. Besides academic achievements, our students are also bringing laurels in the field of
-                extra-curriculur activities by competing against renowned institutions. </p>
+            <p>Our Team consists of a Moderator, Adviser and Technology Enthusiast students. A portion of skilled students form the panel consisting of 50 members. The club consists more than 500 General Members from each batch. The club runs through the particiaption of both panel and general members. </p>
+            <div class="button-box row justify-center align-item-center">
+                <button>Join Now</button>
+                <button>Our Members</button>
+            </div>
             <div class="number-row">
-                <p>+1500 <br>Member</p>
-                <p>+50 <br> Executive</p>
-                <p>+50 <br> Events</p>
-                <p>+50 <br> Workshops</p>
+                <p id="member">+500 <br>Member</p>
+                <p id="exec">+50 <br> Executive</p>
+                <p id="event">+50 <br> Events</p>
+                <p id="workshop">+100 <br> Workshops</p>
             </div>
         </div>
     </div>
 </section>
 
 <section class="events container">
-    <h2>Events</h2>
-    <h4>Learn more about Adamjee Cantonment College and IT Club</h4>
+    <div class="section-header">
+        <h2>Events</h2>
+        <h4>Learn more about Adamjee Cantonment College and IT Club</h4>
+    </div>
     <div class="row">
-        <div class="img-box">
+        <div class="img-box flex-1">
             <img src="img/Dummy2.png" alt="Image">
         </div>
-        <div class="section-box">
+        <div class="section-box flex-1">
             <p>Adamjee Cantonment College is a renowned and well established educational institution of our country and
                 managed by Bangladesh Army. It is crowned with the glory of passing over half a century in the field of
                 education. The institution has earned the rare prestige of being one of the top ranking colleges of our
@@ -164,8 +166,7 @@
                 as the best college among 29 colleges run by Bangladesh Army based on academic and extra-curriculur
                 performances. Besides academic achievements, our students are also bringing laurels in the field of
                 extra-curriculur activities by competing against renowned institutions. </p>
-            <p data-target="0" id="counter">+1500 Member</p>
-            <p>+50 Executive</p>
+            <button>Learn More</button>
         </div>
     </div>
 </section>
@@ -175,7 +176,6 @@
     <h2>Contact Us</h2>
     <div class="row">
         <div class="body">
-
             <div id="form">
                 <h3 class="h3">Contact us</h3>
 
@@ -205,10 +205,8 @@
                     <div class="form-group">
                         <button type="submit" id="button" class="btn btn-primary btn-lg btn-block">Send Message</button>
                     </div>
-
                 </form>
             </div>
-
         </div>
     </div>
 </section>
@@ -224,133 +222,7 @@
 
 </body>
 <script src="js/carousel.js"></script>
-<script>
+<script src="js/index.js"></script>
 
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-    const links = document.querySelectorAll(".nav-links li");
-
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle("open");
-        links.forEach(link => {
-            link.classList.toggle("fade");
-        });
-    });
-    const isInViewport = function (elem) {
-        const distance = elem.getBoundingClientRect();
-        return (
-            distance.top >= 0 &&
-            distance.left >= 0 &&
-            distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    };
-
-    const onViewPort = (element, callback) => {
-        window.addEventListener('scroll', function(event) {
-            // add event on scroll
-
-            if (isInViewport(element)) {
-                //if in Viewport
-                callback()
-            }
-
-        }, false);
-    };
-
-
-    const findMe = document.querySelectorAll('.section-header');
-
-
-
-    document.addEventListener('DOMContentLoaded',function(event){
-        // array with texts to type in typewriter
-        const dataText = ["Adamjee Cantonment College IT Club", " "];
-
-        // type one text in the typwriter
-        // keeps calling itself until the text is finished
-        function typeWriter(text, i, fnCallback) {
-            // chekc if text isn't finished yet
-            if (i < (text.length)) {
-                // add next character to h1
-                document.querySelector(".type-writer").innerHTML = text.substring(0, i+1) +'<span class="type-writer-span" aria-hidden="true"></span>';
-
-                // wait for a while and call this function again for next character
-                setTimeout(function() {
-                    typeWriter(text, i + 1, fnCallback)
-                }, 300);
-            }
-            // text finished, call callback if there is a callback function
-            else if (typeof fnCallback == 'function') {
-                // call callback after timeout
-                setTimeout(fnCallback, 700);
-            }
-        }
-        // start a typewriter animation for a text in the dataText array
-        function StartTextAnimation(i) {
-            if (typeof dataText[i] == 'undefined'){
-                setTimeout(function() {
-                    StartTextAnimation(0);
-                }, 2000);
-            }
-            // check if dataText[i] exists
-            if (i < dataText[i].length) {
-                // text exists! start typewriter animation
-                typeWriter(dataText[i], 0, function(){
-                    // after callback (and whole text has been animated), start next text
-                    StartTextAnimation(i + 1);
-                });
-            }
-        }
-        // start the text animation
-        StartTextAnimation(0);
-    });
-
-
-    const introImage = () => {
-        let intro_images = document.querySelectorAll('.itb-img');
-        let current_class = null;
-        let next_class = null;
-        for(let i=0; i<intro_images.length; i++){
-            let className = intro_images[i].classList[0];
-            if(i === 0){
-                current_class = className;
-                intro_images[i].classList.remove(current_class);
-            }else{
-                next_class =  className;
-                intro_images[i].classList.remove(next_class);
-                intro_images[i].classList.add(current_class);
-                current_class = next_class;
-                if(i === intro_images.length - 1){
-                    intro_images[0].classList.add(current_class);
-                }
-            }
-        }
-    };
-
-    document.addEventListener('DOMContentLoaded', ()=>{
-        setInterval(introImage, 5000)
-    });
-
-    let counter = document.getElementById('counter');
-
-    const counterFunction = () => {
-        let i = 0;
-        function increase() {
-            if (i < 2000) {
-                i+=10;
-                counter.innerText = `+${i} Members`;
-            }
-        }
-
-        setInterval(increase, 1);
-
-
-    };
-    document.addEventListener('DOMContentLoaded', ()=>{
-        setTimeout(counterFunction, 1000)
-    })
-</script>
 </html>
 

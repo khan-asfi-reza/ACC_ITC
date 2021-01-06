@@ -41,6 +41,12 @@ html {
   padding: 0;
   box-sizing: border-box; }
 
+.dark {
+  --bg: black; }
+
+.light {
+  --bg: white; }
+
 body {
   margin: 0;
   padding: 0;
@@ -53,13 +59,17 @@ body {
   font-family: "Kumbh Sans", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black !important; }
+  color: black !important;
+  background-color: var(--bg); }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 button {
   cursor: pointer; }
+
+button:focus {
+  outline: none; }
 
 img {
   width: 400px;
@@ -230,12 +240,12 @@ img {
       width: 100%;
       object-fit: cover; }
   .introduction .img-box .first {
-    top: 70%;
+    top: 65%;
     left: 30%;
     transform: translate(-50%, -50%);
     z-index: 1; }
     .introduction .img-box .first:hover {
-      top: 70%;
+      top: 65%;
       left: 30%;
       transform: translate(-50%, -50%) scale(1.1);
       z-index: 4; }
@@ -250,13 +260,13 @@ img {
       transform: translate(-50%, -50%) scale(1.1);
       z-index: 4; }
   .introduction .img-box .third {
-    top: 30%;
+    top: 35%;
     left: 70%;
     transform: translate(-50%, -50%);
     z-index: 3;
     transition: all 1s ease-in-out; }
     .introduction .img-box .third:hover {
-      top: 30%;
+      top: 45%;
       left: 70%;
       transform: translate(-50%, -50%) scale(1.1);
       z-index: 4; }
@@ -286,6 +296,8 @@ img {
   width: 90%; }
 
 .sectors {
+  animation-name: animate-sector;
+  animation-duration: 1s;
   padding: 5% 5%;
   background: #1a1e41; }
   .sectors .section-header {
@@ -302,13 +314,17 @@ img {
     text-align: center;
     background-color: #232241;
     padding: 14px 10px;
-    min-height: 15rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    min-height: 17rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    position: relative; }
     .sectors .card h4 {
       color: #babfb7;
-      margin: 10px 0; }
+      margin: 10px 0;
+      z-index: 2; }
     .sectors .card p {
-      color: grey; }
+      color: grey;
+      z-index: 2; }
     .sectors .card-logo-container {
       height: 3.5rem;
       width: 3.5rem;
@@ -316,17 +332,53 @@ img {
       border-radius: 50%;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      border: 2px solid #0c1241;
+      z-index: 2; }
     .sectors .card-logo {
       color: white;
-      width: 2rem; }
+      width: 2rem;
+      z-index: 2; }
+    .sectors .card:hover {
+      transform: scale(1.1);
+      z-index: 4; }
+      .sectors .card:hover h4 {
+        color: #0c1241; }
+      .sectors .card:hover p {
+        color: #232241; }
+      .sectors .card:hover-logo-container {
+        border: 2px solid #0c1241; }
+      .sectors .card:hover:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        top: 0;
+        z-index: 1;
+        animation-name: height-100;
+        animation-duration: 0.5s; }
+
+@keyframes height-100 {
+  0% {
+    height: 0; }
+  100% {
+    height: 100%; } }
   .sectors .row {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-column-gap: 10px; }
 
+@keyframes animate-sector {
+  0% {
+    transform: translateY(15px) scale(0.9);
+    opacity: 0; }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1; } }
+
 .our-team {
-  background-color: #50c240; }
+  background-color: #6ac259; }
   .our-team p {
     color: #dbdbdb; }
   .our-team .section-header {
@@ -353,6 +405,28 @@ img {
         border-left: 2px solid white; }
       .our-team .number-row p:last-child {
         border-right: 2px solid white; }
+  .our-team .button-box {
+    margin: 5% 0;
+    display: flex;
+    justify-content: space-evenly; }
+    .our-team .button-box button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      width: 9rem;
+      font-size: 1rem;
+      transition: all 0.4s ease-in-out;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      height: 3.5rem;
+      color: #212529;
+      font-weight: 500;
+      background-color: cornsilk; }
+    .our-team .button-box button:hover {
+      transform: scale(1.1);
+      outline: none; }
+    .our-team .button-box button:active {
+      transform: translateY(4px) scale(1.1);
+      outline: none; }
 
 @keyframes header-text {
   0% {
@@ -636,10 +710,6 @@ label.label {
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-
-@media (prefers-reduced-motion: reduce) {
-  .btn {
-    transition: none; } }
 
 .btn:hover {
   color: #212529;
