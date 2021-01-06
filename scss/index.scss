@@ -918,3 +918,84 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   width: 100%;
 }
 
+.sectors .card h4 {
+  color: #50c240;
+.sectors .card-logo-container {
+  background-color: #50c240;
+.sectors .section-header h2 {
+color: #50c240;
+.sectors .card p {
+color: #e1e1e1;
+.sectors .section-header p {
+color: #e1e1e1;
+}
+.section-header h2 {
+color: #151941;
+
+.our-team .number-row p {
+color: #1a1e41;
+
+.our-team p {
+color: #000000;
+
+.our-team .section-header p {
+color: #000000;
+
+footer{
+  position: bottom;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1e41;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #1a1e41;
+  padding-bottom: 0;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #50c240;
+  background-color: #1a1e41;
+  
+}
+.footer-content h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+  color: #50c240;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.footer-bottom{
+  background:#50c240;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 16px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+
+.footer-title-p{
+  font-size: 15px;
+}
